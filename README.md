@@ -1,4 +1,4 @@
-## House Price Prediction using Machine Learning
+# House Price Prediction using Machine Learning
 
 A machine learning project that predicts house prices based on housing and socio-economic features.  
 The project demonstrates a complete ML workflow including data analysis, preprocessing, model training, and evaluation.
@@ -50,7 +50,7 @@ The model learns linear relationships between features and housing prices.
 
 ##  Environment Setup
 
-### 1️⃣ Clone the Repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/PranabSantra45/housepriceprediction.git
