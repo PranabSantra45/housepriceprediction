@@ -12,15 +12,23 @@ To build a **regression-based machine learning model** that can estimate house p
 ---
 
 ## Project Structure
+
+## Project Structure
+
+```text
 housepriceprediction/
 │
 ├── boston/
-├── main.ipynb # Complete ML workflow (EDA → Model → Evaluation)
-├── README.md # Project documentation
-├── data/ housingdata.csv
+├── main.ipynb          # Complete ML workflow (EDA → Model → Evaluation)
+├── README.md           # Project documentation
+├── data/ housingdata.csv  
 ├── main.py
+├── requirements.txt    # Project dependencies
+├── .gitignore          # Git ignored files
 ├── housepricemmodel.pkl
 └── LICENSE
+
+```
 
 ---
 
@@ -56,6 +64,8 @@ The model learns linear relationships between features and housing prices.
 git clone https://github.com/PranabSantra45/housepriceprediction.git
 cd housepriceprediction
 
+```
+
 ---
 
 ### venv setup
@@ -63,16 +73,21 @@ cd housepriceprediction
 ```bash
 python -m venv boston
 
+```
+
 ### venv activate
 
 ```bash
 boston\Scripts\activate
+
+```
 
 ---
 
 ## installation:
   ```bash
   pip install numpy pandas matplotlib seaborn scikit-learn jupyter
+```
 
 ## run_project:
   start_jupyter:
