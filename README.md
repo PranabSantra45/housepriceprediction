@@ -18,6 +18,7 @@ To build a **regression-based machine learning model** that can estimate house p
 ```text
 housepriceprediction/
 │
+<<<<<<< HEAD
 ├── boston/
 ├── main.ipynb          # Complete ML workflow (EDA → Model → Evaluation)
 ├── README.md           # Project documentation
@@ -29,6 +30,21 @@ housepriceprediction/
 └── LICENSE
 
 ```
+=======
+├── app.py                  # Flask web application
+├── main.ipynb              # EDA, preprocessing, training & evaluation
+├── main.py                 # Model training script
+├── model/
+│   └── model.pkl           # Trained ML model
+├── data/
+│   └── housingdata.csv     # Dataset
+├── templates/
+│   └── index.html          # Web UI
+├── requirements.txt
+├── README.md
+└── LICENSE
+
+>>>>>>> 6549ed3 (Update README and prepare Flask app for deployment)
 
 ---
 
@@ -48,6 +64,7 @@ The model learns linear relationships between features and housing prices.
 - Matplotlib
 - Seaborn
 - Scikit-learn
+- Flask
 
 ### Tools
 - Jupyter Notebook
@@ -94,6 +111,12 @@ boston\Scripts\activate
     command: jupyter notebook
   open_notebook:
     file: main.ipynb
+
+---
+
+## run the web-app:
+```bash
+python app.py
 
 ---
 

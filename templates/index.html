@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Price Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        p.subtitle {
+            text-align: center;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 150px;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            grid-column: span 2;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #e9f5ff;
+            border-left: 5px solid #007bff;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 13px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>House Price Prediction</h1>
+    <p class="subtitle">
+        Predict median house value using Boston Housing dataset features
+    </p>
+
+    <form action="/predict" method="post">
+
+        <div>
+            <label>CRIM (Crime Rate)</label>
+            <input type="number" step="any" name="CRIM" required>
+        </div>
+
+        <div>
+            <label>ZN (Residential Land %)</label>
+            <input type="number" step="any" name="ZN" required>
+        </div>
+
+        <div>
+            <label>INDUS (Industrial Area %)</label>
+            <input type="number" step="any" name="INDUS" required>
+        </div>
+
+        <div>
+            <label>CHAS (Charles River)</label>
+            <input type="number" step="1" name="CHAS" required>
+        </div>
+
+        <div>
+            <label>NOX (Nitric Oxide)</label>
+            <input type="number" step="any" name="NOX" required>
+        </div>
+
+        <div>
+            <label>RM (Avg Rooms)</label>
+            <input type="number" step="any" name="RM" required>
+        </div>
+
+        <div>
+            <label>AGE (Old Houses %)</label>
+            <input type="number" step="any" name="AGE" required>
+        </div>
+
+        <div>
+            <label>DIS (Distance to Employment)</label>
+            <input type="number" step="any" name="DIS" required>
+        </div>
+
+        <div>
+            <label>RAD (Accessibility Index)</label>
+            <input type="number" step="any" name="RAD" required>
+        </div>
+
+        <div>
+            <label>TAX (Property Tax)</label>
+            <input type="number" step="any" name="TAX" required>
+        </div>
+
+        <div>
+            <label>PTRATIO (Pupil-Teacher Ratio)</label>
+            <input type="number" step="any" name="PTRATIO" required>
+        </div>
+
+        <div>
+            <label>B (Black Population Index)</label>
+            <input type="number" step="any" name="B" required>
+        </div>
+
+        <div>
+            <label>LSTAT (Lower Status %)</label>
+            <input type="number" step="any" name="LSTAT" required>
+        </div>
+
+        <button type="submit">Predict House Price</button>
+    </form>
+
+    {% if prediction_text %}
+        <div class="result">
+            {{ prediction_text }}
+        </div>
+    {% endif %}
+
+    <footer>
+        Machine Learning Project • Flask + Scikit-Learn • <a href="https://www.linkedin.com/in/pranabsantra/">Pranab's LinkedIn</a>
+    </footer>
+</div>
+
+</body>
+</html>
