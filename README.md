@@ -17,20 +17,6 @@ To build a **regression-based machine learning model** that can estimate house p
 
 ```text
 housepriceprediction/
-│
-<<<<<<< HEAD
-├── boston/
-├── main.ipynb          # Complete ML workflow (EDA → Model → Evaluation)
-├── README.md           # Project documentation
-├── data/ housingdata.csv  
-├── main.py
-├── requirements.txt    # Project dependencies
-├── .gitignore          # Git ignored files
-├── housepricemmodel.pkl
-└── LICENSE
-
-```
-=======
 ├── app.py                  # Flask web application
 ├── main.ipynb              # EDA, preprocessing, training & evaluation
 ├── main.py                 # Model training script
@@ -44,7 +30,7 @@ housepriceprediction/
 ├── README.md
 └── LICENSE
 
->>>>>>> 6549ed3 (Update README and prepare Flask app for deployment)
+```
 
 ---
 
